@@ -167,18 +167,19 @@ static Key keys[] = {
 	{ MODKEY,			XK_p,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/./addressbook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "joshuto", NULL } } },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		{.v = (const char*[]){ "dmenurecord", NULL } } },
-	/*{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, */
+	{ MODKEY|ControlMask,			XK_n,		setlayout,	{.v = &layouts[0]} },
 	/* { MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, */
 
 
 	/* { MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} },*/ /* bstack */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
+	{ MODKEY|ControlMask,		XK_t,		spawn,          {.v = (const char*[]){ "to_do",NULL } } },
 	{ MODKEY,			XK_y,		setlayout,	{.v = &layouts[2]} }, /* spiral */
 	{ MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[3]} }, /* dwindle */
 	{ MODKEY,			XK_u,		setlayout,	{.v = &layouts[4]} }, /* deck */
 	{ MODKEY|ShiftMask,		XK_u,		setlayout,	{.v = &layouts[5]} }, /* monocle */
 	{ MODKEY,			XK_i,		spawn,		{.v = (const char*[]){ "display_bookmarks", NULL } } },
-	{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
+	/*{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} },*/ /* centeredfloatingmaster */
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
 	{ MODKEY,			XK_bracketleft,		spawn,		{.v = (const char*[]){ "mpc", "seek", "-10", NULL } } },
@@ -191,7 +192,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_s,		spawn,          {.v = (const char*[]){ TERMINAL, "-e", "study_notes", NULL } } },
-	{ MODKEY|ShiftMask,		XK_s,		spawn,		{.v = (const char*[]){ "flashshot","gui", NULL } } },
+	{ MODKEY|ShiftMask,		XK_s,		spawn,		{.v = (const char*[]){ "flameshot","gui", NULL } } },
 	{ MODKEY,			XK_d,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
 	//{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
@@ -199,6 +200,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
 	{ MODKEY|ShiftMask,		XK_g,		shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
+	{ MODKEY|ShiftMask,		XK_h,		spawn,	{.v = (const char*[]){ "templates_tex", NULL } } },
 	/* J and K are automatically bound above in STACKEYS */
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
@@ -323,7 +325,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
 	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
-	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h") },
+	{ ClkStatusText,        ShiftMask,      Button3,       spawn,          SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        defaultgaps,	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
