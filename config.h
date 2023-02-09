@@ -197,7 +197,7 @@ static Key keys[] = {
 	//{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },
-	{ MODKEY,			XK_g,		shiftview,	{ .i = -1 } },
+	{ MODKEY,			XK_g,		spawn,	{.v = (const char*[]){ "games", NULL } } },
 	{ MODKEY|ShiftMask,		XK_g,		shifttag,	{ .i = -1 } },
 	{ MODKEY,			XK_h,		setmfact,	{.f = -0.05} },
 	{ MODKEY|ShiftMask,		XK_h,		spawn,	{.v = (const char*[]){ "templates_tex", NULL } } },
