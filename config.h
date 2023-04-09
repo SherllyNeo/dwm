@@ -191,7 +191,7 @@ static Key keys[] = {
 
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
-	{ MODKEY,			XK_s,		spawn,          {.v = (const char*[]){ TERMINAL, "-e", "smt --flashcards", NULL } } },
+	{ MODKEY,			XK_s,		spawn,          {.v = (const char*[]){ TERMINAL, "-e", "flashcards-cli", NULL } } },
 	{ MODKEY|ShiftMask,		XK_s,		spawn,		{.v = (const char*[]){ "flameshot","gui", NULL } } },
 	{ MODKEY,			XK_d,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
 	//{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
