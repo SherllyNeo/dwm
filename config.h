@@ -225,7 +225,7 @@ static Key keys[] = {
 	{ MODKEY,		        XK_b,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "better_bookmark_add", NULL } } },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		{.v = (const char*[]){"rssadd_yt",NULL } } },
 	{ MODKEY,		        XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat ; pkill -RTMIN+6 dwmblocks") },
-	{ MODKEY,			XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "bashtop", NULL } } },
+	{ MODKEY,			    XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "bashtop", NULL } } },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
 	{ MODKEY|ControlMask,		XK_m,		spawn,		SHCMD("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
