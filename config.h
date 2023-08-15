@@ -222,7 +222,7 @@ static Key keys[] = {
 	/* V is automatically bound above in STACKKEYS */
 	/*{ MODKEY,			XK_b,		togglebar,	{0} }, */
 	/* { MODKEY,			XK_b,		spawn,		{.v = (const char*[]){"bookmark_clipped",NULL } } },*/
-	{ MODKEY,		    XK_b,		spawn,		SHCMD(TERMINAL "-e better_boolmark_add"},
+	{ MODKEY,		        XK_b,		spawn,		SHCMD(TERMINAL "-e better_boolmark_add")},
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		{.v = (const char*[]){"rssadd_yt",NULL } } },
 	{ MODKEY,		        XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat ; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "bashtop", NULL } } },
