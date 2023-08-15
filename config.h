@@ -164,7 +164,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_w,		spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "nmtui", NULL } } },
 	{ MODKEY,   		XK_e,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "neomutt", NULL } } },
-	{ MODKEY,			XK_p,		spawn,		SHCMD(TERMINAL " -e abook -C ~/.config/abook/abookrc --datafile ~/./addressbook") },
+	{ MODKEY,			XK_p,		spawn,		SHCMD(TERMINAL " -e abook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "joshuto", NULL } } },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		{.v = (const char*[]){ "dmenurecord", NULL } } },
 	{ MODKEY|ControlMask,			XK_n,		setlayout,	{.v = &layouts[0]} },
@@ -178,7 +178,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_y,		setlayout,	{.v = &layouts[3]} }, /* dwindle */
 	{ MODKEY,			XK_u,		setlayout,	{.v = &layouts[4]} }, /* deck */
 	{ MODKEY|ShiftMask,		XK_u,		setlayout,	{.v = &layouts[5]} }, /* monocle */
-	{ MODKEY,			XK_i,		spawn,		{.v = (const char*[]){ "display_bookmarks", NULL } } },
+	{ MODKEY,			XK_i,		spawn,		{.v = (const char*[]){ "better_bookmarks", NULL } } },
 	/*{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} },*/ /* centeredfloatingmaster */
 	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
@@ -221,7 +221,8 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
 	/*{ MODKEY,			XK_b,		togglebar,	{0} }, */
-	 { MODKEY,			XK_b,		spawn,		{.v = (const char*[]){"bookmark_clipped",NULL } } },
+	/* { MODKEY,			XK_b,		spawn,		{.v = (const char*[]){"bookmark_clipped",NULL } } },*/
+	{ MODKEY,		    XK_b,		spawn,		SHCMD(TERMINAL "-e better_boolmark_add"},
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		{.v = (const char*[]){"rssadd_yt",NULL } } },
 	{ MODKEY,		        XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat ; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "bashtop", NULL } } },
