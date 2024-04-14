@@ -212,7 +212,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
 
 	//{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
-	{ MODKEY,			XK_z,		spawn,          {.v = (const char*[]){ TERMINAL, "-e", "pass_manager", NULL } } },
+	{ MODKEY,			XK_z,		spawn,          {.v = (const char*[]){ "passmenu", NULL } } },
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	//{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
 	{ MODKEY,			XK_x,		spawn,          {.v = (const char*[]){"zathura","~/.local/share/jars_help.pdf",NULL } } },

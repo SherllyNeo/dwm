@@ -1,4 +1,4 @@
-# Sherlly's for of Luke's build of dwm
+# Sherlly's fork of Luke's build of dwm
 
 ## FAQ
 
