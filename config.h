@@ -164,7 +164,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_w,		spawn,		{.v = (const char*[]){ BROWSER, NULL } } },
 	{ MODKEY|ShiftMask,		XK_w,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "nmtui", NULL } } },
 	{ MODKEY,   		XK_e,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "neomutt", NULL } } },
-	{ MODKEY,			XK_p,		spawn,		SHCMD(TERMINAL " -e abook") },
+	{ MODKEY,			XK_p,		spawn,		SHCMD(TERMINAL " -e babook") },
 	{ MODKEY,			XK_r,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "joshuto", NULL } } },
 	{ MODKEY|ShiftMask,		XK_r,		spawn,		{.v = (const char*[]){ "dmenurecord", NULL } } },
 	{ MODKEY|ControlMask,			XK_n,		setlayout,	{.v = &layouts[0]} },
